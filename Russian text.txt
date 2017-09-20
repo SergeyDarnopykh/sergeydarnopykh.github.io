@@ -1,0 +1,2 @@
+
+Повторение основ html и изучение css: http://learn.shayhowe.com/html-css/

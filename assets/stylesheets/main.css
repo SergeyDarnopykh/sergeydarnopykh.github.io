@@ -51,7 +51,11 @@ table {
 
 
 body {
-	background: -webkit-radial-gradient(to left bottom, #FFF276, #7DF276);
+	background: -webkit-linear-gradient(
+		top,
+		#FFFFCC,
+		#E8D7B5
+		);
 }
 
 h1 {
@@ -73,5 +77,7 @@ p {
 
 footer {
 	font-family: 'Indie Flower', cursive;
-	margin: 15% 0 0 0;
+	position: absolute;
+	bottom: 5%;
+	left: 2.5%;
 }
