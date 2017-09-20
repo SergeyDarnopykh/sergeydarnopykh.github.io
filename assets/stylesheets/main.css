@@ -49,22 +49,29 @@ table {
   border-spacing: 0;
 }
 
+
+body {
+	background: -webkit-radial-gradient(to left bottom, #FFF276, #7DF276);
+}
+
 h1 {
 	font-size: 22px;
+	font-weight: bold;
 	margin: 1.5%;
 }
 
 h2 {
 	font-size: 20px;
+	font-weight: 400;
 	margin: 2% 0 0 3%;
 }
 
 p {
 	font-size: 18px;
-
-	margin: .5% 0 .5% 4.5%
+	margin: .5% 0 .5% 4.5%;
 }
 
 footer {
-	margin: 15% 0 0 0
+	font-family: 'Indie Flower', cursive;
+	margin: 15% 0 0 0;
 }
