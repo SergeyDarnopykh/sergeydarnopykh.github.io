@@ -1,0 +1,91 @@
+@size: 150px;
+@color: red;
+@center: 0 auto;
+@cardHeaderMargin: 1% 0 1.5% 0;
+@cardInfoMargin: 0 2% 2% 2%;
+
+.shaded(@opacity: 0.2) {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,@opacity);
+    transition: 0.3s;
+
+		&:hover {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,@opacity);
+		}
+}
+
+
+body {
+	display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+	flex: 1;
+
+	h1 {
+		font-size: 22px;
+		font-weight: bold;
+		margin: 1.5%;
+	}
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	padding: 1% 0 0 0;
+//	flex-direction: column;
+}
+
+.person {
+//	background: #C97DE8;
+
+	&__photo {
+		width: 150px;
+		height: 150px;
+		margin: @center;
+	}
+
+	&__info {
+//		align-self: center;
+		padding: @cardInfoMargin;
+	}
+
+	.shaded;
+}
+
+//.photo {
+//	margin: @center;
+//	height: @size;
+//	width: @size;
+//}
+
+.content {
+	display: flex;
+	justify-content: space-evenly;
+//	flex-grow: 1;
+	flex-wrap: wrap;
+}
+
+.card {
+	&__header {
+		padding: 1% 0 1.5% 0;
+		margin: 2% 0 0 3%;
+		font-size: 20px;
+		font-weight: 400;
+	}
+
+	&__info {
+//		align-self:stretch;
+		padding: @cardInfoMargin;
+	}
+
+	margin: 1% 6% 1% 6%;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	.shaded;
+}
+
+.contacts {
+	.card;
+	justify-content:flex-end;
+}
+
