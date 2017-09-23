@@ -14,17 +14,14 @@ body {
 	display: flex;
   min-height: 100vh;
   flex-direction: column;
-
-	background: linear-gradient(red, aqua);
 }
 
 .content {
 	flex: 1;
+	margin: .5% 0 .5% 4.5%;
 }
 
 p {
-	font-size: 18px;
-	margin: .5% 0 .5% 4.5%;
 }
 
 footer {

@@ -5,31 +5,33 @@
 		<meta charset="utf-8">
 		<title>SergeyDarnopykh</title>
 		<link rel ="stylesheet" href="assets/stylesheets/reset.css">
-		<link rel ="stylesheet" href="assets/stylesheets/main.css">
+<!--		<link rel ="stylesheet" href="assets/stylesheets/main.css">-->
+		<link rel ="stylesheet" href="assets/stylesheets/tiles.css">
 		<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer" rel="stylesheet">
 	</head>
 	
 	<body>
-		<header>
-			<h1>Персональная информация</h1>
+		<header class="tile">
+			<img src="/assets/images/fml.png" class="photo">
 		</header>
 		
-		<section id="content" class="content">
+		<section class="content">
 			<section class="person-info">
-				<h2>Коротко обо мне</h2>
-				<p>English letters test.</p>
-				<p>Меня зовут Дарнопых Сергей Юрьевич, я студент 2 курса Южного федерального университета. <br>
-					Учусь на кафедре МОП ЭВМ, специальность - Программная инженерия.</p>
+				<p>Дарнопых Сергей, студент ЮФУ, 2 курс<br>
+					Кафедра: МОП ЭВМ <br>
+					Специальность: Программная Инженерия
+				</p>
 			</section>
 
 			<section class="tile">
-				<h2 class="tile__title">HTML/CSS и Javascript</h2>
+				<h2 class="tile__title">Опыт работы с HTML/CSS/Javascript</h2>
 				<div class="tile__info-wr">
 					<p class="tile__info">
-						Опыта работы с HTML и CSS помимо этой web страницы, не имею.
-					</p>
-					<p class="tile__info">В данный момент я вместе с двумя товарищами работаю над браузерной игрой "Дурак". <br>
-					Язык написания - javascript. Моей областью разработки является алгоритм поведения компьютерных игроков. <br>
+						Опыта работы с HTML и CSS помимо этой web страницы, не имею. <br>
+						Есть небольшой опыт работы с Javascipt: <br>
+						В данный момент я с двумя товарищами работаю над браузерной игрой "Дурак". <br>
+						Моей областью разработки является алгоритм поведения компьютерных игроков. <br>
+						<br>
 						<a href="https://durak.herokuapp.com/" target="_blank">Игра на данном этапе разработки</a> <br>
 						<a href="https://github.com/unshame/Cardgame2017" target="_blank_">Исходный код</a>
 					</p>
@@ -37,26 +39,37 @@
 			</section>
 
 			<section class="tile">
-				<h2>Курсы по веб разработке</h2>
-				<div class="tile__info-wr">learn.javascript.ru http://learn.shayhowe.com/html-css/</p>
+				<h2 class="tile__title">Курсы по веб разработке</h2>
+				<div class="tile__info-wr">
+					<p class="tile__info">
+						Мною были изучены основы синтаксиса JS и основы работы с DOM на <a href="http://learn.javascript.ru" target="_blank_">learn.js</a>,
+						основы html/css на <a href="http://learn.shayhowe.com/html-css/" target="_blank_">learn.shayhowe/html-css</a> и
+						основы препроцессора LESS на <a href="http://lesscss.org" target="_blank_">lesscss</a>.
+					</p>
 			</section>
 
-			<section>
-				<h2>Что насчёт английского?</h2>
-				<p>Английский язык - моя вторая натура. Занимаюсь его улучшением в свободное время путём чтения книг, просмотра фильмов и сериалов. <br>
-						Стараюсь читать технические материалы на английском, т.к. считаю что перевод может исказить какие-то вещи, <br>
-						да и вцелом текст смотрится более цельно в оригинале.</p>
+			<section class="tile">
+				<h2 class="tile__title">Немного об английском</h2>
+				<p class="tile__info">
+					Английский язык - моя вторая натура. Занимаюсь его улучшением в свободное <br> время путём чтения книг, просмотра фильмов и сериалов. <br>
+					Стараюсь читать технические материалы исключительно на английском, <br>
+					т.к. считаю что перевод может исказить какие-то вещи, <br>
+					да и в целом текст смотрится более цельно в оригинале.
+				</p>
 			</section>
 
-			<section>
-				<h2>Почему именно фронтэнд?</h2>
-				<p>На бэке ебут сильнее</p>
+			<section class="tile">
+				<h2 class="tile__title">О выборе фронтэнда</h2>
+				<p class="tile__info">
+					Мне хочется попробовать что-нибудь новое, исследовать все доступные варианты <br>
+					для дальнейшего выбора направления развития карьеры.
+				</p>
 			</section>
 		</section>
 
-		<footer>
-			<h2>Контактные данные</h2>
-			<p>
+		<footer class="tile">
+			<h2 class="tile__title">Контактные данные</h2>
+			<p class="tile__info">
 				Email:
 				<a href="mailto:sergey.darnopyh@gmail.com" target="_blank_">sergey.darnopyh@gmail.com</a> <br>
 				<a href="https://vk.com/serega_darnopyh" target="_blank_">VK</a>
