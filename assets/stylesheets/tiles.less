@@ -1,5 +1,6 @@
 @size: 150px;
 @color: red;
+@center: 0 0 0 40%;
 
 body {
 	display: flex;
@@ -20,19 +21,20 @@ body {
 	}
 }
 
-.person-info {
-	margin: .5% 0 .5% 4.5%;;
+.photo {
+	margin: @center;
+	height: @size;
+	width: @size;
 }
 
-.tile {
+.content {
+	.person-info {
+		margin: @center;
+	}
 
-	margin: .5% 0 .5% 4.5%;;
-
-	.photo {
-		height: @size;
-		width: @size;
+	.tile {
+		margin: .5% 0 .5% 4.5%;
 	}
 }
-
 
 
