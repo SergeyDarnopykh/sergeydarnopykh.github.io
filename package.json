@@ -1,0 +1,22 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://SergeyDarnopykh:i1s2p3a4@github.com/SergeyDarnopykh/sergeydarnopykh.github.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeyDarnopykh/sergeydarnopykh.github.com/issues"
+  },
+  "homepage": "https://github.com/SergeyDarnopykh/sergeydarnopykh.github.com#readme",
+  "dependencies": {
+    "webpack": "^3.6.0"
+  }
+}
