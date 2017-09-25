@@ -7,56 +7,64 @@
 		<link rel ="stylesheet" href="assets/stylesheets/reset.css">
 <!--		<link rel ="stylesheet" href="assets/stylesheets/main.css">-->
 <!--		<link rel ="stylesheet" href="assets/stylesheets/cards.css">-->
-		<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Forum|Didact+Gothic|Lobster|Oswald|EB+Garamond|IM+Fell+Great+Primer|Alegreya+Sans" rel="stylesheet">
 	</head>
 	
 	<body>
 		<header class="header">
 			<section class="person">
-				<img class="person__photo" src="/assets/images/me.jpg">
+				<img class="person__photo" src="/assets/images/myPhoto.jpg">
 				<h1 class="person__name">Дарнопых Сергей</h1>
-				<p class="person__info">
-					Cтудент 2 курса ЮФУ <br>
-					Кафедра: МОП ЭВМ <br>
-					Специальность: Программная Инженерия
-				</p>
 			</section>
 		</header>
 
 		<section class="content">
+<!--
 			<section class="card">
-				<h2 class="card__header">Опыт работы с HTML/CSS/Javascript</h2>
-					<p class="card__info">
-						Опыта работы с HTML и CSS, помимо этой web страницы, не имею.
-						Есть небольшой опыт работы с Javascipt:
-						в данный момент я с двумя товарищами работаю над браузерной игрой "Дурак".
-						Моей областью разработки является алгоритм поведения компьютерных игроков. <br>
-						<a href="https://durak.herokuapp.com/" target="_blank">Игра на данном этапе разработки</a> <br>
-						<a href="https://github.com/unshame/Cardgame2017" target="_blank_">Исходный код</a>
-					</p>
+				<h2 class="card__header">О себе</h2>
+					<ul class="card__info">
+						<li><span class="item_header">Университет:</span> ЮФУ</li>
+						<li><span class="item_header">Кафедра:</span> МОП ЭВМ</li>
+						<li><span class="item_header">Специальность:</span> Програмная инженерия</li>
+						<li><span class="item_header">Курс:</span> 2-ой</li>
+					</ul>
+			</section>
+-->
+
+			<section class="card">
+				<h2 class="card__header">Место учёбы</h2>
+					<ul class="card__info">
+						<li><span class="item_header">Университет:</span> ЮФУ</li>
+						<li><span class="item_header">Кафедра:</span> МОП ЭВМ</li>
+						<li><span class="item_header">Специальность:</span> Програмная инженерия</li>
+						<li><span class="item_header">Курс:</span> 2-ой</li>
+					</ul>
 			</section>
 
 			<section class="card">
-				<h2 class="card__header">Курсы по веб разработке</h2>
-					<p class="card__info">
-<!--						Перефразировать-->
-						Мною были изучены основы синтаксиса JS и основы работы с DOM
-						на <a href="http://learn.javascript.ru" target="_blank_">learn.js</a>,
-						основы html/css на <a href="http://learn.shayhowe.com/html-css/" target="_blank_">
-						learn.shayhowe/html-css</a> и
-						основы препроцессора LESS на <a href="http://lesscss.org" target="_blank_">lesscss</a>.
-					</p>
+				<h2 class="card__header">HTML/CSS/Javascript</h2>
+					<ul class="card__info">
+						<li><span class="item_header">Опыт работы с HTML/CSS:</span> только эта web страницы.</li>
+						<li><span class="item_header">Опыт работы с JS:</span> алгоритм поведения ботов в браузерной игре <a href="https://durak.herokuapp.com/" target="_blank">"Дурак"</a> (в разработке).
+						<a href="https://github.com/unshame/Cardgame2017" target="_blank_">Исходный код</a></li>
+					</ul>
 			</section>
 
 			<section class="card">
-				<h2 class="card__header">Немного об английском</h2>
-				<p class="card__info">
-					Английский язык - моя вторая натура. Занимаюсь его улучшением в свободное  время путём чтения книг, просмотра фильмов и сериалов.
-					Стараюсь читать технические материалы исключительно на английском,
-					т.к. считаю что перевод может исказить какие-то вещи,
-					да и в целом текст смотрится более цельно в оригинале.
-				</p>
+				<h2 class="card__header">Изученные web технологии</h2>
+					<ul class="card__info">
+						<li>Основы синтаксиса js на <a href="http://learn.javascript.ru" target="_blank_">learn.js</a>.</li>
+						<li>Основы html/css на <a href="http://learn.shayhowe.com/html-css/" target="_blank_">learn.shayhowe</a>.</li>
+						<li>Основы препроцессора LESS на <a href="http://lesscss.org" target="_blank_">lesscss</a>.</li>
+					</ul>
+			</section>
+
+			<section class="card">
+				<h2 class="card__header">English ****, do you speak it?</h2>
+				<ul class="card__info">
+					<li><span class="item_header">Живу английским:</span> книги, фильмы, сериалы, игры - познаю всё только в оригинале.</li>
+					<li><span class="item_header">Уровень владения: </span> Upper-Intermediate.</li>
+				</ul>
 			</section>
 
 			<section class="card">
@@ -74,7 +82,8 @@
 				<p class="contacts__info" >
 					Email:
 					<a href="mailto:sergey.darnopyh@gmail.com" target="_blank_">sergey.darnopyh@gmail.com</a> <br>
-					<a href="https://vk.com/serega_darnopyh" target="_blank_">VK</a>
+					<a href="https://vk.com/serega_darnopyh" target="_blank_">Vkontakte</a>
+				</p>
 				</p>
 			</section>
 		</footer>
