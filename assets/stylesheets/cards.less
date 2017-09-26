@@ -3,16 +3,15 @@
 @cardTextMargin: 4% 3% 3% 4%;
 @shadow: black 2px 2px 2px;
 @textFontSize: 20px;
-@textFontWeight: 400;
+@titleFontWeight: 400;
 @backgroundColor: #364B71;
+@cardWidth: 230px;
 
 .up {
 	&:hover {
 		position: relative;
-//    left: 0px;
-		bottom: 1px;
-		left: 1px;
-
+		bottom: 2px;
+		left: 2px;
 	}
 }
 
@@ -27,9 +26,14 @@
 	}
 }
 
-.shadedWithoutHover(@direction: 0 8px 16px 0, @opacity: 0.2) {
+.header {
+	background: url("/assets/images/cloud.png");
+	background-size: cover;
+}
+
+.shadedWithoutHover(@opacity: 0.2) {
 	// Тень без наведения
-	box-shadow: @direction rgba(0, 0, 0, @opacity);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, @opacity);
   transition: 0.3s;
 }
 
@@ -45,12 +49,33 @@
 }
 
 &:visited {
-	@visitedColor: #B149C2;
+	@linkColor: white;
 
-	color: @visitedColor;
-//	text-decoration-line: underline;
+	color: @linkColor;
+	text-decoration: none;
+
 	&:hover {
-		color: darken(@visitedColor, 25%);
+		color: darken(@linkColor, 25%);
+	}
+
+//	@visitedColor: #B149C2;
+//
+//	color: @visitedColor;
+//	&:hover {
+//		color: darken(@visitedColor, 25%);
+//	}
+}
+
+.person__name_link {
+	&:link, &:visited {
+		@linkColor: white;
+
+		color: @linkColor;
+		text-decoration: none;
+
+		&:hover {
+			color: darken(@linkColor, 25%);
+		}
 	}
 }
 
@@ -62,15 +87,9 @@
 	background: #E9EAEE;
 }
 
-.header {
-	display: flex;
-	justify-content: center;
-	background: url("/assets/images/cloud2.png");
-	background-size: cover;
-}
-
 .person {
 	display: flex;
+	justify-content: center;
 
 	&__photo {
 		height: 100px;
@@ -85,30 +104,26 @@
 
 	&__name {
 		color: white;
-		font-size: 40px;
+		font-size: 45px;
 		font-weight: bold;
 		filter:contrast(.9);
 		font-family: 'Oswald', sans-serif;
 		text-shadow: @shadow;
-
-		margin: auto;
-		margin-left: 15%;
 		padding: 2% 0;
 	}
 }
 
 .content {
-	margin: 1.7% 0 0 0;
+	margin: 3% 0 0 0;
 
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-//	align-items: flex-start;
 }
 
 .item_highlight {
 	font: @textFontSize + 2px;
-	font-weight: @textFontWeight + 200;
+	font-weight: @titleFontWeight + 200;
 }
 
 
@@ -116,106 +131,131 @@ li {
 	padding-bottom: 2%;
 }
 
+.restorePosition {
+		transform: rotate(0deg);
+}
+
 .card_rotated_right {
 	transform: rotate(-1.5deg);
+
+	&:hover {
+		.restorePosition;
+	}
 }
 
 .card_rotated_left {
 	transform: rotate(1.5deg);
+
+	&:hover {
+		.restorePosition;
+	}
 }
 
 .card {
 	&__image {
-		display: flex;
-		width: 300px;
+		width: @cardWidth;
 		padding: 3% 3% 0 3%;
-		justify-content: center;
 		background: white;
-//		.shadedWithoutHover;
+		visibility: hidden;
+//		filter:saturate(.7);
 	}
 
-	&__header {
-//		background: radial-gradient(
-//			lighten(@backgroundColor, 15%),
-//			lighten(@backgroundColor, 1%)
-//		);
+	&__title {
 		padding: 3% 0;
+		visibility: hidden;
 		font-size: @textFontSize;
-		font-weight: @textFontWeight;
+		font-weight: @titleFontWeight;
 		font-family: 'Didact Gothic', sans-serif;
-//		text-shadow: @shadow;
-//		color: darken(white, .1);
 		text-align: center;
 		background: white;
-		.shadedWithoutHover;
 	}
 
 
 	&__text {
+//		position: absolute;
+//		position: 0 auto;
+
 		visibility: hidden;
 		margin: @cardTextMargin;
 		font-family: 'Alegreya Sans', sans-serif;
-//		visibility: hidden;
 	}
 
-//	&:nth-child() {
-//		transform: rotate(2deg);
-//	}
+	&__icon {
+		width: @cardWidth / 1.7;
+		position: absolute;
+		bottom: 27%;
+		right: 20%;
+	}
 
-	margin: 0 5% 1.7% 5%;
+	&:hover & {
+		&__image, &__title, &__text {
+			visibility: visible;
+		}
+
+		&__icon {
+			visibility: hidden;
+		}
+	}
+
+	margin: 0 1.5% 1.7% 1.5%;
 	display: flex;
 	flex-direction: column;
-	width: 300px;
-//	background: white;
-
-//	.up;
-//	.shaded;
+	width: @cardWidth;
+	background: white;
+	.up;
+	.shaded;
 }
-
-&card_rotated_right {
-		transform: rotate(2deg);
-	}
-
-	&card_rotated_left {
-		transform: rotate(-2deg);
-	}
 
 .footer {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 }
+
+
 
 .contacts {
 	.card;
+	.card_rotated_left;
 //	margin: @cardTextMargin;
-	margin: 0 1.4% .7% 0;
-	justify-content: flex-end;
+//	visibility: hidden;
+	margin: 4% 1.4% .7% 0;
 //	background: url("/assets/images/bat.png");
 //	background-size: cover;
 }
 
-//.card {
-//	perspective: 1000px;
-//	transition: 0.6s;
-//	transform-style: preserve-3d;
-//
-//	position: relative;
-//
-//	&__header, &__text {
-//		visibility: hidden;
-//	}
-//
-//	&__image, &__text {
-//	backface-visibility: hidden;
-//
-//	position: absolute;
-//	top: 0;
-//	left: 0;
-//}
-//
-//	&:hover {
-//		transform: rotateY(180deg);
-//	}
-//}
+.vkontakte {
+	width: 64px;
+	height: 64px;
+}
+
+
+@media screen and (max-width:479px) {
+	.header {
+		background: url("/assets/images/cloud.png");
+	}
+
+
+	.person {
+		&__name {
+//			justify-content: center;
+		}
+	}
+
+	.card {
+		.restorePosition;
+
+		&__image, &__title, &__text {
+			visibility: visible;
+		}
+
+		&__icon {
+			visibility: hidden;
+		}
+	}
+
+	.contacts {
+		.restorePosition;
+	}
+}
 
 

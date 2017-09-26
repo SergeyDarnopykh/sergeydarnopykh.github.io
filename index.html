@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!--  Добавить фишку перевода страницы на английский-->
 	<head>
 		<meta charset="utf-8">
 		<title>SergeyDarnopykh</title>
@@ -8,20 +7,22 @@
 <!--		<link rel ="stylesheet" href="assets/stylesheets/main.css">-->
 <!--		<link rel ="stylesheet" href="assets/stylesheets/cards.css">-->
 		<link href="https://fonts.googleapis.com/css?family=Forum|Didact+Gothic|Lobster|Oswald|EB+Garamond|IM+Fell+Great+Primer|Alegreya+Sans" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	
 	<body class="page">
 		<header class="header">
 			<section class="person">
-				<img class="person__photo" src="/assets/images/fml.png">
-				<h1 class="person__name">Дарнопых Сергей</h1>
+<!--				<img class="person__photo" src="/assets/images/fml.png">-->
+<!--				Убрать класс????!!?!?!??-->
+				<a href="https://vk.com/serega_darnopyh" target="_blank_"><h1 class="person__name"><a class="person__name_link" href="https://vk.com/serega_darnopyh" target="_blank_">Дарнопых Сергей<a></a></h1>
 			</section>
 		</header>
 
 		<section class="content">
 <!--
 			<section class="card">
-				<h2 class="card__header">О себе</h2>
+				<h2 class="card__title">О себе</h2>
 					<ul class="card__text">
 						<li><span class="item_header">Университет:</span> ЮФУ</li>
 						<li><span class="item_header">Кафедра:</span> МОП ЭВМ</li>
@@ -32,8 +33,9 @@
 -->
 
 			<section class="card card_rotated_right">
-				<img class="card__image" src="assets/images/harvard.jpg">
-				<h2 class="card__header">Место учёбы</h2>
+					<img class="card__image" src="assets/images/harvard.jpg">
+<!--					<h2 class="card__title">Место учёбы</h2>-->
+					<img class="card__icon" src="/assets/images/big_I.png">
 					<ul class="card__text">
 						<li><span class="item item_highlight">Университет:</span> ИТА ЮФУ</li>
 						<li><span class="item item_highlight">Кафедра:</span> МОП ЭВМ</li>
@@ -43,8 +45,9 @@
 			</section>
 
 			<section class="card card_rotated_left">
-				<img class="card__image" src="assets/images/html_css_js.jpg">
-				<h2 class="card__header">HTML/CSS/Javascript</h2>
+				<img class="card__image" src="assets/images/frontendfront-logo-share.png">
+<!--				<h2 class="card__title">HTML/CSS/Javascript</h2>-->
+				<img class="card__icon" src="/assets/images/big_love.png">
 				<ul class="card__text">
 					<li><span class="item item_highlight">Опыт работы с HTML/CSS:</span> только эта web страницы.</li>
 					<li><span class="item item_highlight">Опыт работы с JS:</span> алгоритм поведения ботов в браузерной игре <a href="https://durak.herokuapp.com/" target="_blank">"Дурак"</a> (в разработке).
@@ -52,9 +55,10 @@
 				</ul>
 			</section>
 
-			<section class="card">
-				<img class="card__image" src="assets/images/frontendfront-logo-share.png">
-				<h2 class="card__header">Изученные web технологии</h2>
+			<section class="card card_rotated_left">
+				<img class="card__image" src="assets/images/social.jpg">
+<!--				<h2 class="card__title">Web технологии</h2>-->
+				<img class="card__icon" src="/assets/images/ps4.png">
 				<ul class="card__text">
 					<li>Основы синтаксиса js на <a href="http://learn.javascript.ru" target="_blank_">learn.js</a>.</li>
 					<li>Основы html/css на <a href="http://learn.shayhowe.com/html-css/" target="_blank_">learn.shayhowe</a>.</li>
@@ -62,16 +66,19 @@
 				</ul>
 			</section>
 
-			<section class="card">
-				<h2 class="card__header">English, *********, do you speak it?</h2>
+			<section class="card card_rotated_right">
+				<img class="card__image" src="assets/images/front.jpg">
+<!--				<h2 class="card__title">English</h2>-->
+<!--				<img class="card__icon" src="/assets/images/guitar.png"> -->
 				<ul class="card__text">
 					<li><span class="item item_highlight">Живу английским:</span> книги, фильмы, сериалы, игры - познаю всё только в оригинале.</li>
 					<li><span class="item item_highlight">Уровень владения: </span> Upper-Intermediate.</li>
 				</ul>
 			</section>
 
-			<section class="card card_rotated_right">
-				<h2 class="card__header">О выборе фронтэнда</h2>
+			<section class="card card_rotated_left">
+				<img class="card__image" src="assets/images/front.jpg">
+<!--				<h2 class="card__title">О выборе фронтэнда</h2>-->
 				<p class="card__text">
 					Мне хочется попробовать что-нибудь новое, исследовать все доступные варианты
 					для дальнейшего выбора направления развития карьеры.
@@ -79,17 +86,17 @@
 			</section>
 		</section>
 
+<!--
 		<footer class="footer">
 			<section class="contacts">
-				<h2 class="contacts__header">Контактные данные</h2>
+				<h2 class="contacts__title">Контактные данные</h2>
 				<p class="contacts__text" >
-					Email:
-					<a href="mailto:sergey.darnopyh@gmail.com" target="_blank_">sergey.darnopyh@gmail.com</a> <br>
-					<a href="https://vk.com/serega_darnopyh" target="_blank_">Vkontakte</a>
+					<a href="mailto:sergey.darnopyh@gmail.com" target="_blank_"><img class="vkontakte" src="assets/images/gmail.png"></a> <br>
+					<a href="https://vk.com/serega_darnopyh" target="_blank_"><img class="vkontakte" src="assets/images/vk.png"></a>
 				</p>
 			</section>
 		</footer>
-
+-->
 		
 		<script src="http://localhost:8080/dist/js/common.js"></script>
 	</body>
