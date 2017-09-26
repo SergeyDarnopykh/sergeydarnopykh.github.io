@@ -1,7 +1,7 @@
 @center: 0 auto;
 @cardHeaderMargin: 1% 0 1.5% 0;
-@cardInfoMargin: 3% 3% 3% 3%;
-@shadow: black 3px 3px 3px;
+@cardTextMargin: 4% 3% 3% 4%;
+@shadow: black 2px 2px 2px;
 @textFontSize: 20px;
 @textFontWeight: 400;
 @backgroundColor: #364B71;
@@ -9,8 +9,9 @@
 .up {
 	&:hover {
 		position: relative;
-//		transform: translate3d();
-//		transform: translateZ(20px);
+//    left: 0px;
+		bottom: 1px;
+		left: 1px;
 
 	}
 }
@@ -20,20 +21,20 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, @opacity);
   transition: 0.3s;
 
+
 	&:hover {
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, @opacity);
 	}
 }
 
-.shadedWithoutHover(@direction: 0 4px 8px 0, @opacity: 0.2) {
+.shadedWithoutHover(@direction: 0 8px 16px 0, @opacity: 0.2) {
 	// Тень без наведения
 	box-shadow: @direction rgba(0, 0, 0, @opacity);
   transition: 0.3s;
 }
 
-
 &:link {
-	@linkColor: #8B8AF5;
+	@linkColor: #3FA3F5;
 
 	color: @linkColor;
 	text-decoration: none;
@@ -53,7 +54,7 @@
 	}
 }
 
-body {
+.page {
 	display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -77,37 +78,22 @@ body {
 		box-sizing: content-box;
 		box-shadow: @shadow;
 
-//		border: rgba(0, 0, 0, 0.3) 10px;
 		border-style: inset;
 		filter: contrast(1.05);
 		margin: 7% 5%;
-//		background: rgba(0, 0, 0, 1);
 	}
 
 	&__name {
-//		align-content: center;
 		color: white;
 		font-size: 40px;
 		font-weight: bold;
 		filter:contrast(.9);
 		font-family: 'Oswald', sans-serif;
-
 		text-shadow: @shadow;
-//		background: rgba(0, 0, 0, 0.3);
 
 		margin: auto;
 		margin-left: 15%;
 		padding: 2% 0;
-//		background: white;
-//		.shadedWithoutHover;
-	}
-
-	&__info {
-		padding: @cardInfoMargin;
-		text-align: left;
-		width: 315px;
-		background: white;
-		.shaded;
 	}
 }
 
@@ -120,50 +106,79 @@ body {
 //	align-items: flex-start;
 }
 
-.item_header {
+.item_highlight {
 	font: @textFontSize + 2px;
 	font-weight: @textFontWeight + 200;
 }
+
 
 li {
 	padding-bottom: 2%;
 }
 
-.card {
-	background: white;
+.card_rotated_right {
+	transform: rotate(-1.5deg);
+}
 
+.card_rotated_left {
+	transform: rotate(1.5deg);
+}
+
+.card {
 	&__image {
+		display: flex;
 		width: 300px;
+		padding: 3% 3% 0 3%;
+		justify-content: center;
+		background: white;
 //		.shadedWithoutHover;
 	}
 
 	&__header {
-		background: radial-gradient(
-			lighten(@backgroundColor, 15%),
-			lighten(@backgroundColor, 1%)
-		);
-		padding: 5% 0;
+//		background: radial-gradient(
+//			lighten(@backgroundColor, 15%),
+//			lighten(@backgroundColor, 1%)
+//		);
+		padding: 3% 0;
 		font-size: @textFontSize;
 		font-weight: @textFontWeight;
 		font-family: 'Didact Gothic', sans-serif;
-		color: darken(white, .1);
+//		text-shadow: @shadow;
+//		color: darken(white, .1);
 		text-align: center;
+		background: white;
 		.shadedWithoutHover;
 	}
 
-	&__info {
-		margin: @cardInfoMargin;
+
+	&__text {
+		visibility: hidden;
+		margin: @cardTextMargin;
 		font-family: 'Alegreya Sans', sans-serif;
 //		visibility: hidden;
 	}
+
+//	&:nth-child() {
+//		transform: rotate(2deg);
+//	}
 
 	margin: 0 5% 1.7% 5%;
 	display: flex;
 	flex-direction: column;
 	width: 300px;
-	.up;
-	.shaded;
+//	background: white;
+
+//	.up;
+//	.shaded;
 }
+
+&card_rotated_right {
+		transform: rotate(2deg);
+	}
+
+	&card_rotated_left {
+		transform: rotate(-2deg);
+	}
 
 .footer {
 	display: flex;
@@ -172,8 +187,35 @@ li {
 
 .contacts {
 	.card;
-//	margin: @cardInfoMargin;
-	margin: 0 2%;
+//	margin: @cardTextMargin;
+	margin: 0 1.4% .7% 0;
 	justify-content: flex-end;
+//	background: url("/assets/images/bat.png");
+//	background-size: cover;
 }
+
+//.card {
+//	perspective: 1000px;
+//	transition: 0.6s;
+//	transform-style: preserve-3d;
+//
+//	position: relative;
+//
+//	&__header, &__text {
+//		visibility: hidden;
+//	}
+//
+//	&__image, &__text {
+//	backface-visibility: hidden;
+//
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//}
+//
+//	&:hover {
+//		transform: rotateY(180deg);
+//	}
+//}
+
 
