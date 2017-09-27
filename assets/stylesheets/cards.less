@@ -1,11 +1,27 @@
+@shadow: black 2px 2px 2px;
 @center: 0 auto;
 @cardHeaderMargin: 1% 0 1.5% 0;
 @cardTextMargin: 4% 3% 3% 4%;
-@shadow: black 2px 2px 2px;
+
 @textFontSize: 20px;
 @titleFontWeight: 400;
 @backgroundColor: #364B71;
 @cardWidth: 230px;
+
+
+.shaded(@opacity: 0.2) {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,@opacity);
+    transition: 0.3s;
+
+		&:hover {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,@opacity);
+		}
+}
+
+.shadedWithoutHover(@opacity: 0.2) {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, @opacity);
+  transition: 0.3s;
+}
 
 .up {
 	&:hover {
@@ -15,59 +31,10 @@
 	}
 }
 
-.shaded(@opacity: 0.2) {
-	// Тень
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, @opacity);
-  transition: 0.3s;
 
 
-	&:hover {
-		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, @opacity);
-	}
-}
-
-.header {
-	background: url("/assets/images/cloud.png");
-	background-size: cover;
-}
-
-.shadedWithoutHover(@opacity: 0.2) {
-	// Тень без наведения
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, @opacity);
-  transition: 0.3s;
-}
-
-&:link {
-	@linkColor: #3FA3F5;
-
-	color: @linkColor;
-	text-decoration: none;
-
-	&:hover {
-		color: darken(@linkColor, 25%);
-	}
-}
-
-&:visited {
-	@visitedColor: #B149C2;
-
-	color: @visitedColor;
-	&:hover {
-		color: darken(@visitedColor, 25%);
-	}
-}
-
-.person__name_link {
-	&:link, &:visited {
-		@linkColor: white;
-
-		color: @linkColor;
-		text-decoration: none;
-
-		&:hover {
-			color: darken(@linkColor, 25%);
-		}
-	}
+.restorePosition {
+		transform: rotate(0deg);
 }
 
 .page {
@@ -76,32 +43,6 @@
   flex-direction: column;
 	flex: 1;
 	background: #E9EAEE;
-}
-
-.person {
-	display: flex;
-	justify-content: center;
-
-	&__photo {
-		height: 100px;
-		border-radius: 50%;
-		box-sizing: content-box;
-		box-shadow: @shadow;
-
-		border-style: inset;
-		filter: contrast(1.05);
-		margin: 7% 5%;
-	}
-
-	&__name {
-		color: white;
-		font-size: 45px;
-		font-weight: bold;
-		filter:contrast(.9);
-		font-family: 'Oswald', sans-serif;
-		text-shadow: @shadow;
-		padding: 2% 0;
-	}
 }
 
 .content {
@@ -122,9 +63,6 @@ li {
 	padding-bottom: 2%;
 }
 
-.restorePosition {
-		transform: rotate(0deg);
-}
 
 .card_rotated_right {
 	transform: rotate(-1.5deg);
@@ -143,12 +81,19 @@ li {
 }
 
 .card {
+	margin: 0 1.5% 1.7% 1.5%;
+	display: flex;
+	flex-direction: column;
+	width: @cardWidth;
+	background: white;
+	.up;
+	.shaded;
+
 	&__image {
 		width: @cardWidth;
 		padding: 3% 3% 0 3%;
 		background: white;
 		visibility: hidden;
-//		filter:saturate(.7);
 	}
 
 	&__title {
@@ -163,9 +108,6 @@ li {
 
 
 	&__text {
-//		position: absolute;
-//		position: 0 auto;
-
 		visibility: hidden;
 		margin: @cardTextMargin;
 		font-family: 'Alegreya Sans', sans-serif;
@@ -187,79 +129,7 @@ li {
 			visibility: hidden;
 		}
 	}
-
-	margin: 0 1.5% 1.7% 1.5%;
-	display: flex;
-	flex-direction: column;
-	width: @cardWidth;
-	background: white;
-	.up;
-	.shaded;
 }
 
-.footer {
-	display: flex;
-	justify-content: flex-end;
-	margin: 12% 3% 0 0;
-//	.header;
-}
-
-
-
-.contacts {
-//
-//
-//	.card;
-//	.card_rotated_left;
-
-	display: flex;
-	flex-direction: row;
-////	margin: @cardTextMargin;
-////	visibility: hidden;
-//	margin: 4% 1.4% .7% 0;
-}
-
-.vkontakte {
-	width: 45px;
-	height: 45px;
-	box-sizing: content-box;
-	padding: 0 5% 5% 5%;
-//	.shaded;
-//	.up;
-}
-
-
-@media screen and (max-width:479px) {
-	.header {
-		background: url("/assets/images/cloud.png");
-	}
-
-
-	.person {
-		&__name {
-//			justify-content: center;
-		}
-	}
-
-	.card {
-		.restorePosition;
-
-		&__image, &__title, &__text {
-			visibility: visible;
-		}
-
-		&__icon {
-			visibility: hidden;
-		}
-	}
-
-	.footer {
-		justify-content: center;
-	}
-
-	.contacts {
-		.restorePosition;
-	}
-}
 
 

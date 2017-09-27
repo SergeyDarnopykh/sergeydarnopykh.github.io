@@ -1,0 +1,19 @@
+&:link {
+	@linkColor: #3FA3F5;
+
+	color: @linkColor;
+	text-decoration: none;
+
+	&:hover {
+		color: darken(@linkColor, 25%);
+	}
+}
+
+&:visited {
+	@visitedColor: #B149C2;
+
+	color: @visitedColor;
+	&:hover {
+		color: darken(@visitedColor, 25%);
+	}
+}

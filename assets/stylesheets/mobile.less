@@ -1,0 +1,29 @@
+.restorePosition {
+		transform: rotate(0deg);
+}
+
+@media screen and (max-width:479px) {
+	.header {
+		background: url("/assets/images/cloud.png");
+	}
+
+	.card {
+		.restorePosition;
+
+		&__image, &__title, &__text {
+			visibility: visible;
+		}
+
+		&__icon {
+			visibility: hidden;
+		}
+	}
+
+	.footer {
+		justify-content: center;
+	}
+
+	.contacts {
+		.restorePosition;
+	}
+}
