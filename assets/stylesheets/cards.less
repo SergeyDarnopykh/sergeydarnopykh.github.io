@@ -49,21 +49,12 @@
 }
 
 &:visited {
-	@linkColor: white;
+	@visitedColor: #B149C2;
 
-	color: @linkColor;
-	text-decoration: none;
-
+	color: @visitedColor;
 	&:hover {
-		color: darken(@linkColor, 25%);
+		color: darken(@visitedColor, 25%);
 	}
-
-//	@visitedColor: #B149C2;
-//
-//	color: @visitedColor;
-//	&:hover {
-//		color: darken(@visitedColor, 25%);
-//	}
 }
 
 .person__name_link {
@@ -208,24 +199,33 @@ li {
 
 .footer {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
+	margin: 12% 3% 0 0;
+//	.header;
 }
 
 
 
 .contacts {
-	.card;
-	.card_rotated_left;
-//	margin: @cardTextMargin;
-//	visibility: hidden;
-	margin: 4% 1.4% .7% 0;
-//	background: url("/assets/images/bat.png");
-//	background-size: cover;
+//
+//
+//	.card;
+//	.card_rotated_left;
+
+	display: flex;
+	flex-direction: row;
+////	margin: @cardTextMargin;
+////	visibility: hidden;
+//	margin: 4% 1.4% .7% 0;
 }
 
 .vkontakte {
-	width: 64px;
-	height: 64px;
+	width: 45px;
+	height: 45px;
+	box-sizing: content-box;
+	padding: 0 5% 5% 5%;
+//	.shaded;
+//	.up;
 }
 
 
@@ -251,6 +251,10 @@ li {
 		&__icon {
 			visibility: hidden;
 		}
+	}
+
+	.footer {
+		justify-content: center;
 	}
 
 	.contacts {
