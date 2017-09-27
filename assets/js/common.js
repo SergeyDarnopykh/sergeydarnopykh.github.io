@@ -8,5 +8,4 @@ require('../stylesheets/person.less');
 require('../stylesheets/card.less');
 require('../stylesheets/footer.less');
 
-
-//cd /D E:/Sergey_work/GitHub/sergeydarnopykh.github.com npm start
+//cd /D E:/Sergey_work/GitHub/sergeydarnopykh.github.com
