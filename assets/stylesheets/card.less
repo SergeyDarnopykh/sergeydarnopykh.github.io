@@ -10,20 +10,15 @@
 
 .shaded(@opacity: 0.2) {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, @opacity);
-    transition: 0.3s;
-
-		&:hover {
-			box-shadow: 0 8px 16px 0 rgba(0, 0,  0,@opacity);
-		}
-}
-
-.shadedWithoutHover(@opacity: 0.2) {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, @opacity);
   transition: 0.3s;
+
+	&:hover {
+		box-shadow: 0 8px 16px 0 rgba(0, 0,  0,@opacity);
+	}
 }
 
 .restorePosition {
-		transform: rotate(0deg);
+	transform: rotate(0deg);
 }
 
 .card {
@@ -33,10 +28,6 @@
 	width: @cardWidth;
 	background: white;
 	.shaded;
-
-	li {
-		padding-bottom: 2%;
-	}
 
 	&__image {
 		visibility: hidden;
@@ -49,6 +40,10 @@
 		visibility: hidden;
 		margin: @cardTextMargin;
 		font-family: 'Alegreya Sans', sans-serif;
+
+		li {
+			padding-bottom: 2%;
+		}
 	}
 
 	&__icon {
