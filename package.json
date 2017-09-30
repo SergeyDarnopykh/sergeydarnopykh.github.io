@@ -28,8 +28,9 @@
     "postcss-loader": "^2.0.6",
     "safe-buffer": "^5.1.1",
     "style-loader": "^0.18.2",
+    "uglify": "^0.1.5",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2",
-    "uglifyjs-webpack-plugin": "^0.4.6"
+    "webpack-dev-server": "^2.8.2"
   }
 }
