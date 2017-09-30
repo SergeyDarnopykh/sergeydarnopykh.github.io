@@ -13,5 +13,4 @@ require('../stylesheets/link.less');
 require('../stylesheets/mobile.less');
 require('../stylesheets/content.less');
 
-
-//cd /D E:/Sergey_work/GitHub/sergeydarnopykh.github.com
+// cd /D E:\sergey_work\GitHub\sergeydarnopykh.github.com

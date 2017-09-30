@@ -9,8 +9,8 @@ var env               = process.env.NODE_ENV || 'development',
     }),
     prodPlugins  = [
         new webpack.optimize.UglifyJsPlugin({
-            compress: {warnings: false},
-            sourceMap: false
+          compress: {warnings: false},
+          sourceMap: false,				
         })
     ];
 
