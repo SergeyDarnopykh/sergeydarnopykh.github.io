@@ -215,7 +215,7 @@ table {
   transform: rotate(0deg);
 }
 .header {
-  background: url("/assets/images/cloud.png");
+  background: url("../../assets/images/cloud.png");
   background-size: cover;
   display: flex;
   justify-content: center;
